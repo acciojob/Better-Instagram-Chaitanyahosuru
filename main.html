@@ -105,9 +105,9 @@
           // Ensure that we're not swapping the element with itself
           if (draggedItem !== e.target) {
             // Swapping the background images of the dragged item and the drop target
-            let tempImage = window.getComputedStyle(draggedItem).backgroundImage;
-            draggedItem.style.backgroundImage = window.getComputedStyle(e.target).backgroundImage;
-            e.target.style.backgroundImage = tempImage;
+            let tempImage = draggedItem.style.backgroundImage;
+draggedItem.style.backgroundImage = e.target.style.backgroundImage;
+e.target.style.backgroundImage = tempImage;
           }
         });
       });
